@@ -1,0 +1,7 @@
+# This is the placeholder you use for chat formatting.
+# Most likely %player%, %1$s by default.
+player-placeholder: '%1$s'
+title-prefix:
+  exampletitle: '&6[&eMyTitle&6] '
+player-data:
+  exampleUserUUID: exampletitle

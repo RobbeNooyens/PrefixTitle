@@ -1,0 +1,10 @@
+name: PrefixTitle
+version: 1.8.8.1
+description: Sets titles for players
+main: me.robnoo02.prefixtitle.Main
+
+commands:
+  prefixtitle:
+    usage: /<command>
+    description: Main command
+    aliases: [ptitle]
