@@ -8,7 +8,11 @@ import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 public class ChatEvent implements Listener {
 
-	@EventHandler(priority = EventPriority.HIGHEST)
+	/**
+	 * Handles chat event.
+	 * Adds a prefix before a playername.
+	 */
+	@EventHandler(priority = EventPriority.HIGH)
 	public void onChat(AsyncPlayerChatEvent e) {
 		String format = e.getFormat();
 		String placeHolder = ConfigManager.getPlaceHolder();

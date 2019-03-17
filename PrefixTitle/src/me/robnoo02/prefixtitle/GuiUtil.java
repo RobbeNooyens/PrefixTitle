@@ -27,9 +27,16 @@ import org.bukkit.inventory.meta.SkullMeta;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
 
+/**
+ * Self-made Gui class.
+ * It's not the best one, it'll be updated and improved soon.
+ * 
+ * @author Robnoo02
+ *
+ */
 public class GuiUtil implements Listener {
-
-	private static final GuiManager INSTANCE = new GuiManager();
+	
+	private static final GuiManager INSTANCE = new GuiManager(); // Stores singleton instance for GuiManager
 
 	public static class Gui {
 

@@ -1,8 +1,17 @@
 package me.robnoo02.prefixtitle;
 
+import java.util.Set;
+
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
+/**
+ * This class gets and sets data in the config.yml file.
+ * Static methods are used to prevent unnecessary instantiation.
+ * 
+ * @author Robnoo02
+ *
+ */
 public class ConfigManager {
 	
 	private static final String PLACEHOLDER_PATH = "player-placeholder";
@@ -41,5 +50,9 @@ public class ConfigManager {
 	
 	public static void removeTitle(Player p) {
 		setTitle(p, null);
+	}
+	
+	public static Set<String> getPrefixes(){
+		return Main.getInstance().getConfig().getConfigurationSection(TITLE_PREFIX).getKeys(false);
 	}
 }

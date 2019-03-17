@@ -4,15 +4,29 @@ import java.util.HashMap;
 
 import org.bukkit.entity.Player;
 
+/**
+ * Singleton which manages titles.
+ * Stores titles which are already used.
+ * Creates new Title-instances if needed.
+ * 
+ * @author Robnoo02
+ *
+ */
 public class TitleManager {
 
-	private static final TitleManager INSTANCE = new TitleManager();
+	private static final TitleManager INSTANCE = new TitleManager(); // Stores singleton instance
 	
-	private HashMap<String, Title> titles = new HashMap<>();
+	private HashMap<String, Title> titles = new HashMap<>(); // Stores Titles which are used at least once
 	
+	/**
+	 * Constructor is private to provide non-instantiability for singleton.
+	 */
 	private TitleManager() {
 	}
 	
+	/**
+	 * @return Singleton of TitleManager
+	 */
 	public static TitleManager getInstance() {
 		return INSTANCE;
 	}

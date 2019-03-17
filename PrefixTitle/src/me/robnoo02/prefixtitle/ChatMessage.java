@@ -5,6 +5,15 @@ import java.util.List;
 
 import org.bukkit.entity.Player;
 
+/**
+ * Enums contain a list of strings.
+ * Each string will be send to a player as a single message.
+ * Multiple lines will create a textbox.
+ * There's one placeholder for a custom variable (%var%).
+ * 
+ * @author Robnoo02
+ *
+ */
 public enum ChatMessage {
 
 	HELP("§8§m-----------------------------------------------------", "§6PrefixTitle Help", "§8~~~~~~~~~~~",
