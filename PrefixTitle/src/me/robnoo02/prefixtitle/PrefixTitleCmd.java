@@ -16,13 +16,18 @@ public class PrefixTitleCmd implements CommandExecutor {
 		if(!(sender instanceof Player))
 			return true;
 		Player p = (Player) sender;
-		if(args.length == 0)
-			return ChatMessage.HELP.send(p);
+		if(args.length == 0) {
+			Gui gui = GuiFactory.getPrefixGui(p, 1);
+			gui.open();
+			return true;
+		}
 		switch(args[0]) {
+		case "help":
+			return ChatMessage.HELP.send(p);
 		case "info": // /prefixtitle info -> sends textblock
 			return ChatMessage.INFO.send(p);
 		case "open": // /prefixtitle open -> opens Gui 
-			Gui gui = GuiFactory.getPrefixGui(p);
+			Gui gui = GuiFactory.getPrefixGui(p, 1);
 			gui.open();
 			return true;
 		case "set": // /prefixtitle set <title> -> sets your title

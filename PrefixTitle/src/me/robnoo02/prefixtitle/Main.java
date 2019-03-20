@@ -11,7 +11,9 @@ public class Main extends JavaPlugin {
 	public void onEnable() {
 		saveDefaultConfig();
 		Bukkit.getPluginManager().registerEvents(new ChatEvent(), this);
+		Bukkit.getPluginManager().registerEvents(new GuiUtil(), this);
 		getCommand("prefixtitle").setExecutor(new PrefixTitleCmd());
+		GuiFactory.setDefaultItems();
 	}
 	
 	/**
